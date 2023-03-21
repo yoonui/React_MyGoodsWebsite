@@ -1,11 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <Layout>
-      <MainPage />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

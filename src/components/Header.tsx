@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div>
@@ -17,9 +19,12 @@ const Header = () => {
           <button className="p-8 text-lg text-white font-Kim400 hover:font-Kim700">
             회원가입
           </button>
-          <button className="p-8 text-lg text-white font-Kim400 hover:font-Kim700">
+          <Link
+            className="p-8 text-lg text-white font-Kim400 hover:font-Kim700"
+            to="/login"
+          >
             로그인
-          </button>
+          </Link>
         </div>
       </div>
     </div>
