@@ -23,6 +23,7 @@ const MainPage = () => {
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
       </Swiper>
+
       <div className="flex items-center justify-between m-20">
         <div className="border-[3px] border-main-color w-[380px] h-[380px]">
           이미지1
