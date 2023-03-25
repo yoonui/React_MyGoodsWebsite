@@ -8,6 +8,8 @@ import LoginPage from "./pages/LoginPage";
 import DisplayPage from "./pages/DisplayPage";
 import SalePage from "./pages/SalePage";
 
+import MyPage from "./pages/MyPage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +21,8 @@ function App() {
 
           <Route path="/display" element={<DisplayPage />} />
           <Route path="/sale" element={<SalePage />} />
+
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
