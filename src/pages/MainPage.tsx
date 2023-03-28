@@ -14,6 +14,7 @@ const MainPage = () => {
         modules={[Navigation, Pagination]}
         spaceBetween={50}
         slidesPerView={1}
+        loop={true}
         navigation
         pagination={{ clickable: true }}
       >
