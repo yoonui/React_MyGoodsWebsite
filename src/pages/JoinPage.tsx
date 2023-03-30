@@ -1,4 +1,9 @@
+import account from "../database/account.json";
+
 const JoinPage = () => {
+  account.filter((e) => {
+    console.log(e);
+  });
   return (
     <div className="flex justify-center my-8">
       <div className="w-[400px] m-3 px-16 py-10 border-[3px] text-center">

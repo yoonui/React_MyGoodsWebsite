@@ -1,9 +1,30 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import account from "../database/account.json";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const goJoinBtn = () => {
+    // 회원가입 페이지로 이동
     navigate("/join");
+  };
+
+  const [id, setId] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const idOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setId(e.target.value.toLocaleLowerCase());
+  };
+  const pwdOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPwd(e.target.value);
+  };
+
+  const loginBtn = () => {
+    account.filter((e) => {
+      if (e.id === id && e.password === pwd) {
+        console.log("gooooood");
+      }
+    });
   };
 
   return (
@@ -13,16 +34,28 @@ const LoginPage = () => {
 
         <div className="mt-8">
           <div className="text-lg text-left font-Kim400">아이디</div>
-          <input className="w-[265px] h-[43px] border-[2px] p-2" />
+          <input
+            className="w-[265px] h-[43px] border-[2px] p-2"
+            placeholder="id"
+            value={id}
+            onChange={idOnChange}
+          />
         </div>
 
         <div className="my-4">
           <div className="text-lg text-left font-Kim400">비밀번호</div>
-          <input className="w-[265px] h-[43px] border-[2px] p-2" />
+          <input
+            className="w-[265px] h-[43px] border-[2px] p-2"
+            placeholder="password"
+            onChange={pwdOnChange}
+          />
         </div>
 
         <div className="mt-10 text-center">
-          <button className="w-[265px] px-8 py-3 text-white bg-secondary-color hover:bg-secondary-color-bold">
+          <button
+            className="w-[265px] px-8 py-3 text-white bg-secondary-color hover:bg-secondary-color-bold"
+            onClick={loginBtn}
+          >
             로그인하기
           </button>
         </div>
