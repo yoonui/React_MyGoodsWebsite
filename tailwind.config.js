@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "main-color": "#337EB8",
+        "main-color-deep": "#216396",
         footer: "#9A9A9A",
         "secondary-color": "#2AB8A9",
         "secondary-color-bold": "#23998D",
